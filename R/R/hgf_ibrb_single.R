@@ -1,16 +1,11 @@
 #' @templateVar MODEL_FUNCTION hgf_ibrb_single
 #' @templateVar CONTRIBUTOR \href{https://github.com/bugoverdose}{Jinwoo Jeong} <\email{jwjeong96@@gmail.com}>, \href{https://github.com/juhajulia}{Juha Lee} <\email{juhajulia44@@gmail.com}>, \href{https://github.com/0150362}{Yusom Jo} <\email{yaun2288@@snu.ac.kr}>
-#' @templateVar TASK_NAME 
-#' @templateVar TASK_CODE 
-#' @templateVar TASK_CITE 
 #' @templateVar MODEL_NAME Individual-level Bayesian version of the Hierarchical Gaussian Filter model for binary inputs and binary responses
 #' @templateVar MODEL_CODE hgf_ibrb
 #' @templateVar MODEL_CITE (Mathys C, 2011; Mathys CD et al., 2014)
 #' @templateVar MODEL_TYPE Individual
 #' @templateVar DATA_COLUMNS "trialNum", "u", "y"
 #' @templateVar PARAMETERS \code{kappa} (phasic volatility for coupling with higher level for each level (2 ~ L-1)), \code{omega} (tonic volatility for each level (2 ~ L)), \code{zeta} (inverse decision noise, the tendency to choose the response that corresponds with one\'s current belief)
-#' @templateVar REGRESSORS 
-#' @templateVar POSTPREDS 
 #' @templateVar LENGTH_DATA_COLUMNS 3
 #' @templateVar DETAILS_DATA_1 \item{trialNum}{Nominal integer representing the trial number: 1, 2, ...}
 #' @templateVar DETAILS_DATA_2 \item{u}{Integer value representing the input on that trial: 0 or 1.}
@@ -21,11 +16,11 @@
 #' @templateVar ADDITIONAL_ARGS_3 \item{mu0}{prior belief for each level before starting the experiment}
 #' @templateVar ADDITIONAL_ARGS_4 \item{sigma0}{prior uncertainty for each level before starting the experiment}
 #' @templateVar ADDITIONAL_ARGS_5 \item{kappa_lower}{Lower bounds for kappa for each level (2 ~ L-1). Defaults to [0] and can not be negative. Parameter value is fixed for level l if kappa_upper[l] == kappa_lower[l].}
-#' @templateVar ADDITIONAL_ARGS_6 \item{kappa_upper}{Upper bounds for kappa for each level (2 ~ L-1). Defaults to [3]. Parameter value is fixed for level l if kappa_upper[l] == kappa_lower[l].}
+#' @templateVar ADDITIONAL_ARGS_6 \item{kappa_upper}{Upper bounds for kappa for each level (2 ~ L-1). Defaults to [2]. Parameter value is fixed for level l if kappa_upper[l] == kappa_lower[l].}
 #' @templateVar ADDITIONAL_ARGS_7 \item{omega_lower}{Lower bounds for omega for each level (2 ~ L). Defaults to [-10. -15]. Parameter value is fixed for level l if omega_upper[l] == omega_lower[l].}
-#' @templateVar ADDITIONAL_ARGS_8 \item{omega_upper}{Upper bounds for omega for each level (2 ~ L). Defaults to [5, 5]. Parameter value is fixed for level l if omega_upper[l] == omega_lower[l].}
+#' @templateVar ADDITIONAL_ARGS_8 \item{omega_upper}{Upper bounds for omega for each level (2 ~ L). Defaults to [0, 0]. Parameter value is fixed for level l if omega_upper[l] == omega_lower[l].}
 #' @templateVar ADDITIONAL_ARGS_9 \item{zeta_lower}{Upper bound for zeta. Defaults to 0 and can not be negative. Parameter value is fixed if zeta_lower == zeta_upper.}
-#' @templateVar ADDITIONAL_ARGS_10 \item{zeta_upper}{Upper bound for zeta. Defaults to 3. Parameter value is fixed if zeta_lower == zeta_upper.}
+#' @templateVar ADDITIONAL_ARGS_10 \item{zeta_upper}{Upper bound for zeta. Defaults to 2. Parameter value is fixed if zeta_lower == zeta_upper.}
 #'
 #' @template model-documentation
 #'
@@ -56,11 +51,11 @@ hgf_ibrb_single <- hBayesDM_model(
     'mu0' = c(0.5, 1.0),
     'sigma0' = c(0.1, 1.0),
     'kappa_lower' = c(0),
-    'kappa_upper' = c(3),
+    'kappa_upper' = c(2),
     'omega_lower' = c(-10, -15),
-    'omega_upper' = c(5, 5),
+    'omega_upper' = c(0, 0),
     'zeta_lower' = 0,
-    'zeta_upper' = 3
+    'zeta_upper' = 2
   ),
   regressors      = NULL,
   postpreds       = NULL,

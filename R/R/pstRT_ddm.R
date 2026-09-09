@@ -1,5 +1,5 @@
 #' @templateVar MODEL_FUNCTION pstRT_ddm
-#' @templateVar CONTRIBUTOR \href{https://hydoh.github.io/}{Hoyoung Doh} <\email{hoyoung.doh@@gmail.com}>, \href{https://medicine.yale.edu/lab/goldfarb/profile/sanghoon_kang/}{Sanghoon Kang} <\email{sanghoon.kang@@yale.edu}>, \href{https://jihyuncindyhur.github.io/}{Jihyun K. Hur} <\email{jihyun.hur@@yale.edu}>
+#' @templateVar CONTRIBUTOR \href{https://github.com/hydoh/}{Hoyoung Doh} <\email{hoyoung.doh@@gmail.com}>, \href{https://github.com/sanghoon-kang/}{Sanghoon Kang} <\email{sanghoon.kang@@yale.edu}>, \href{https://jihyuncindyhur.github.io/}{Jihyun K. Hur} <\email{jihyun.hur@@yale.edu}>
 #' @templateVar TASK_NAME Probabilistic Selection Task (with RT data)
 #' @templateVar TASK_CODE pstRT
 #' @templateVar TASK_CITE (Frank et al., 2007; Frank et al., 2004)
@@ -9,7 +9,6 @@
 #' @templateVar MODEL_TYPE Hierarchical
 #' @templateVar DATA_COLUMNS "subjID", "cond", "choice", "RT"
 #' @templateVar PARAMETERS \code{a} (boundary separation), \code{tau} (non-decision time), \code{d1} (drift rate scaling), \code{d2} (drift rate scaling), \code{d3} (drift rate scaling)
-#' @templateVar REGRESSORS 
 #' @templateVar POSTPREDS "choice_os", "RT_os"
 #' @templateVar LENGTH_DATA_COLUMNS 4
 #' @templateVar DETAILS_DATA_1 \item{subjID}{A unique identifier for each subject in the data-set.}

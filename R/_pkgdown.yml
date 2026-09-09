@@ -26,17 +26,19 @@ reference:
   contents:
   - estimate_mode
   - extract_ic
-  - HDIofMCMC
+  - hdi
   - multiplot
-  - plotDist
-  - plotHDI
-  - plotInd
-  - printFit
+  - plot_dist
+  - plot_hdi
+  - plot_ind
+  - print_fit
   - rhat
 
 articles:
-- title: Getting started
-  contents: getting_started
+- title: Tutorial
+  contents: 
+    - getting_started
+    - hgf_tutorial
 
 toc:
   depth: 1
