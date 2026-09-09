@@ -2,14 +2,6 @@ Package: hBayesDM
 Title: Hierarchical Bayesian Modeling of Decision-Making Tasks
 Version: 2.0.1
 Date: 2026-09-09
-Author:
-    Woo-Young Ahn [aut, cre],
-    Nate Haines [aut],
-    Lei Zhang [aut],
-    Jinwoo Jeong [ctb],
-    Harhim Park [ctb],
-    Jaeyeong Yang [ctb],
-    Jethro Lee [ctb]
 Authors@R: c(
     person("Woo-Young", "Ahn", email = "wooyoung.ahn@gmail.com", role = c("aut", "cre")),
     person("Nate", "Haines", email = "haines.175@osu.edu", role = c("aut")),
@@ -18,8 +10,7 @@ Authors@R: c(
     person("Harhim", "Park", email = "hrpark12@gmail.com", role = c("ctb")),
     person("Jaeyeong", "Yang", email = "jaeyeong.yang1125@gmail.com", role = c("ctb")),
     person("Jethro", "Lee", email = "dlemfh96@snu.ac.kr", role = c("ctb"))
-)
-Maintainer: Woo-Young Ahn <wooyoung.ahn@gmail.com>
+    )
 Description:
     Fit an array of decision-making tasks with computational models in
     a hierarchical Bayesian framework. Can perform hierarchical Bayesian analysis of
